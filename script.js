@@ -12,17 +12,16 @@ const hold = document.querySelector('.hold');
 const int = (function () {
 	let scores = [0, 0];
 	let activePlayer = 0;
+	let playerScore = [0, 0];
 
 	const switchPlayer = () => {
 		activePlayer = activePlayer === 0 ? 1 : 0;
 	};
 
 	hold.addEventListener('click', () => {
-		let playerScore = 0;
+		playerScore[activePlayer] += scores[activePlayer];
 
-		playerScore += scores[activePlayer];
-
-		document.querySelector(`.player-${activePlayer}`).textContent = playerScore;
+		document.querySelector(`.player-${activePlayer}`).textContent = playerScore[activePlayer];
 		switchPlayer();
 	});
 
