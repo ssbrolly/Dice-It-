@@ -44,14 +44,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
-	/* flex: 50%; */
-	flex-grow: 1;
-	/* border: solid 1px black; */
-}
-
-.player-1 {
 	background: #35748fa4;
+	flex-grow: 1;
 }
 
 .player {
@@ -61,7 +55,7 @@ main {
 	color: #333;
 }
 
-.score {
+.player-score {
 	font-size: 8rem;
 	margin-bottom: 12rem;
 	color: #31657c;
